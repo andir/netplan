@@ -6,9 +6,9 @@ BUILDFLAGS = \
 	-Werror \
 	$(NULL)
 
-SYSTEMD_GENERATOR_DIR=$(shell pkg-config --variable=systemdsystemgeneratordir systemd)
-SYSTEMD_UNIT_DIR=$(shell pkg-config --variable=systemdsystemunitdir systemd)
-BASH_COMPLETIONS_DIR=$(shell pkg-config --variable=completionsdir bash-completion || echo "/etc/bash_completion.d")
+SYSTEMD_GENERATOR_DIR =? $(shell pkg-config --variable =? systemdsystemgeneratordir systemd)
+SYSTEMD_UNIT_DIR =? $(shell pkg-config --variable =? systemdsystemunitdir systemd)
+BASH_COMPLETIONS_DIR =? $(shell pkg-config --variable =? completionsdir bash-completion || echo "/etc/bash_completion.d")
 
 GCOV ?= gcov
 ROOTPREFIX ?=
